@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="division">
+        <div class="di">
+        <img src="profile.png" alt="" width="100px">
+        <h3>Ask me a question ?</h3>
+        <input type="text" placeholder="Type something..." id="inp"><br>
+        <button onclick="check()">Accept</button>
+        <button onclick="checker()">Decline</button>
+    </div>
+</div>
+    <script>
+        const q1="How are you"
+        const  q2="Where are you from"
+        const q3="What is your age"
+        const q4="What is your aim"
+        function check(){
+            const val=document.querySelector('body')
+          const ans=document.getElementById("inp").value;
+          if(ans==q1||ans==q2){
+            alert("Accepted")
+            val.style.backgroundColor="green"
+          }
+          else if(ans==""){
+            alert("Enter any question")
+          }
+          else{
+            val.style.backgroundColor="red"
+            alert("Declined ")
+            
+          }
+        }
+        function checker(){
+           const an = document.getElementById('inp')
+           const val1=document.querySelector('body')
+           val1.style.backgroundColor="white"
+           an.value="";
+        }
+    </script>
+</body>
+</html>
